@@ -27,11 +27,11 @@ but I aim to strictly adhere to their standards, as the authors of sklego also d
 Go yo your favorite IDE/Terminal and install `buildpipe` via pip with
 
 ```bash
-pip install git+https://gitlab.com/dataalliance/b2b/products/brandaid/platform/buildpipe.git
+pip install git+
 ```
 For Google GCP notebooks with username and password:
 ```bash
-pip install git+https://username:password@gitlab.com/dataalliance/b2b/products/brandaid/platform/buildpipe.git
+pip install git+
 ```
 
 <span style="color:red">It is highly recommended to NOT just clone the repo. Please use the pip install routine.
@@ -75,7 +75,7 @@ if your model offers time features like dates or times.
   - expanding or 
   - sliding windows 
 - Fully integrated logging of key results in MLFlow, if the user wants it
-- Usage of several pre-processing steps from sklearn, self-written or from the BrandAid project
+- Usage of several pre-processing steps from sklearn or self-written 
 - Finally, aligned results to the all models and folds
 
 
@@ -218,7 +218,7 @@ Using the package may create different errors, depending on the environment you 
 with its ml flow decorators:
 - try not to use mlflow with a notebook that resides in project/lab 'xy' in Google but wants to log for a project 'z' in Google.
 In other words. For every VM you have an IAM Service Role. Every Service Role is allowed to create artifact storages for MLFlow in Google, 
-  but only for the project/lab your notebook resides in. Thus, you can not log BrandAid experiments over the onAIr ml flow dashboard.
+  but only for the project/lab your notebook resides in. Thus, you can not log experiments for project xy over the project y ml flow dashboard.
   Projects have no access to each other, due to account restrictions.
   
 - when using the package without access to GCP, your terminal will throw a warning, that you are not using a Google Auth, however, since you are in the
@@ -239,7 +239,7 @@ Here's a list of features that this library currently offers:
 - `buildpipe.PreProcessing.Processing` labelencode, list label encoded, gaussian seasonality, add trend
 - `buildpipe.SplitMethods.SlidingWindowSplit` SlidingWindowSplitter like the sktime Splitter, borrows from TimeSeriesSplit of sklearn
 - `buildpipe.MlflowDecorators` Simple useful functions for Mlflow processes and mlflow decorators to activte mlflow
-- `buildpipe.BrandAidPreTransformers` Functional transformers for Preprocessing data (BrandAid specific)
+- `buildpipe.PreTransformers` Functional transformers for Preprocessing data 
 
 
 ## Future Features
@@ -254,7 +254,7 @@ Here's a list of features that are planned for this library:
 ## Contributing new Features
 New Features can be proposed, as same as optimization in code architecture or code writing
 New features however, should:
-1. contribute toward a demonstratable real-world usecase where they lighten up code work or show other fancyness ;-)
+1. contribute toward a representative real-world usecase where they lighten up code work or show other fancyness ;-)
 2. any new feature should pass standard unit tests (which will come in a future stable release of buildpipe)
 3. if the new feature has been discussed beforehand
 
