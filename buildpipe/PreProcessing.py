@@ -64,7 +64,7 @@ class Processing:
             Should start on the first of a month
         """
 
-        set_datenames = {"sendetag"}
+        set_datenames = {"tag"}
 
         def is_in_datenames(column: str, datenames: set) -> bool:
             """check if date column for seasonality is known"""
