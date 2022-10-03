@@ -34,8 +34,8 @@ For Google GCP notebooks with username and password:
 pip install git+
 ```
 
-<span style="color:red">It is highly recommended to NOT just clone the repo. Please use the pip install routine.
-In case you are using a new machine. Please upgrade pip first see next section "Troubleshooting Installation"</span>
+<span style="color:red">It is highly recommended though to just clone the repo.
+Please upgrade pip first see next section "Troubleshooting Installation"</span>
 
 ## Troubleshooting Installation
 - it is possible that you have to be added to the project before using the pip installation, if none of the previous
