@@ -13,3 +13,12 @@ mlflow
 optuna
 sklego
 typing
+black==22.8.0
+click==8.1.3
+coverage==6.4.4
+flake8==5.0.4
+isort[requirements_deprecated_finder]
+mypy==0.981
+pre-commit==2.20
+pytest==7.1.3
+sphinx==1.*
