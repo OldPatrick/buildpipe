@@ -6,6 +6,7 @@ Changelog of buildpipe package
 ###### Added
 - Added .pre-commit-config.yaml
 - Added .isort.cfg
+- Added mypy.ini
 
 ###### Updated
 - Updated requirements.txt:
