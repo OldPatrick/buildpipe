@@ -39,6 +39,7 @@ jobs:
           pip install matplotlib
           pip install mlflow
           pip install click
+          pip install IPython
           pytest -v --cov --cov-report=xml:reports/coverage/coverage.xml
           pytest --junitxml=reports/junit/junit.xml
           genbadge coverage
