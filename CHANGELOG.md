@@ -1,6 +1,18 @@
 Changelog of buildpipe package
 ==============================
 
+## [ 0.5.a ] -  Date 2022/10/11
+### Changes
+###### Added
+- Added reports folder
+- Added *.svg
+- Added setup.cfg
+
+###### Updated
+- Updated yaml file with more packages
+- Added badges to the front with genbadge to cover python version, amount of tests and coverage
+
+
 ## [ 0.5 ] -  Date 2022/10/03
 ### Changes
 ###### Added
