@@ -28,6 +28,7 @@ jobs:
         run: |
           pip install ddt
           pip install google-cloud-bigquery
+          pip install google-cloud-storage
           pip install pytest
           pip install pytest-cov
           pip install coverage
