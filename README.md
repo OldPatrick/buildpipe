@@ -1,5 +1,13 @@
-# buildpipe [ 0.5 ]
+# buildpipe [ 0.5.a ]
 <img src="https://cdn.pixabay.com/photo/2016/08/03/07/30/pipeline-1566044_960_720.png" width="500" height="400" />
+
+## Badges
+
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Tests](./tests-badge.svg)](./reports/junit/report.html)
+[![Coverage](./coverage-badge.svg)](./reports/coverage/coverage.xml)
+
+## Description
 
 The package's main goal is, that you love it. Why?
 The package combines several sub pipelines, meta estimators, baselines, several loading methods and mlflow decorators  
