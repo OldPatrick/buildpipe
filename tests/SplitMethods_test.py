@@ -11,16 +11,16 @@ from buildpipe.SplitMethods import SlidingWindowSplit
 class TestSlidingWindowSplit(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls._data = pd.DataFrame({"X": np.arange(0, 1095, 2)})
-        cls._splits = 2
-        cls._folds = 3
+        cls._data = pd.DataFrame({"X": np.arange(0, 1999, 2)})
+        cls._splits = 5  # splits are atm folds renaming is advised
+        cls._folds = 2
         cls._window_step = 1
         cls._sliding_step = 1
         cls._forecast_step = 1
 
-    def test_split_length(self):
-        # 3 years split
-        res = list(
+    def test_fold_length(self):
+        # folds are splits + 1
+        folds = list(
             SlidingWindowSplit(
                 self._splits,
                 self._folds,
@@ -31,12 +31,12 @@ class TestSlidingWindowSplit(unittest.TestCase):
         )
 
         self.assertEqual(
-            len(res),
+            len(folds) + 1,
             self._splits,
         )
 
     def test_fold_values_equals_one(self):
-        n_folds = 0  # gets +1 in init class
+        n_folds = 1
         self.assertRaises(
             ValueError,
             SlidingWindowSplit,

@@ -13,14 +13,14 @@ reqs = [str(ir.requirement) for ir in install_reqs]
 
 setup(
     name="buildpipe",
-    version="0.5",
+    version="0.5.a",
     packages=["buildpipe"],
     url="https://github.com/OldPatrick/buildpipe",
     license="MIT",
     author="bormannp",
     author_email="patrick.bormann@gmx.de",
     description="Validation Pipe for different "
-    "experiments based on sklearn architecture",
+    "experiments based on sklearn architecture with mlflow",
     install_requires=reqs,
     long_description=long_description,
     long_description_content_type="text/markdown",
