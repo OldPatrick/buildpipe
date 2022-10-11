@@ -35,6 +35,7 @@ jobs:
           pip install pandas
           pip install scikit-learn==0.24.2
           pip install py_dotenv
+          pip install optuna
           pip install mlflow
           pip install click
           pytest -v --cov --cov-report=xml:reports/coverage/coverage.xml
