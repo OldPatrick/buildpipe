@@ -1,9 +1,9 @@
 new_dict = {
   "mlflow_start":{
       "usage":                    False,
-      "uri":                      "https://mlflow-internal.onair.lab.da-service.io/",
+      "uri":                      "https://mlflow-somemlflowadress/",
       "experiment_name":          "log_in_test1",
-      "artifact_storage":         "gs://mgr-onair-lab-2c1k-mlflow-lab/"
+      "artifact_storage":         "gs://some-lab/"
   },
   "mlflow_run": {
     "meta":{
@@ -20,9 +20,9 @@ new_dict = {
     },
     "mlflow_tags": {
         "fixed_parent_run": {
-            "package version":    "buildpipe 0.1.a.",
-            "target prediction":  "market_share",
-            "project":            "onAIr",
+            "package version":    "buildpipe 0.5.a.",
+            "target prediction":  "some_kpi",
+            "project":            "some_project",
             "task":               "experimental_task",
             "model_type":         "regression"
         },

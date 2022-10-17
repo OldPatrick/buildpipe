@@ -35,15 +35,10 @@ but I aim to strictly adhere to their standards, as the authors of sklego also d
 Go yo your favorite IDE/Terminal and install `buildpipe` via pip with
 
 ```bash
-pip install git+
-```
-For Google GCP notebooks with username and password:
-```bash
-pip install git+
+!pip install git+https://github.com/OldPatrick/buildpipe.git
 ```
 
-<span style="color:red">It is highly recommended though to just clone the repo.
-Please upgrade pip first see next section "Troubleshooting Installation"</span>
+<span style="color:red">In case of any trouble, try to clone the repo and install requirements manually"</span>
 
 ## Troubleshooting Installation
 - it is possible that you have to be added to the project before using the pip installation, if none of the previous
