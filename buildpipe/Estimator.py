@@ -32,13 +32,15 @@ class Estimator(BaseEstimator, RegressorMixin):
         self,
         trend_season_model: object, residual_model: object,
         time_columns_start: int = None,
-        reuse_time_feats: bool = False
+        reuse_time_feats: bool = False,
+        suppress: bool = False
     ) -> None:
         """ A constructor to forward the estimators to the class """
         self.time_columns_start = time_columns_start
         self.trend_season_model = trend_season_model
         self.residual_model = residual_model
         self.reuse_time_feats = reuse_time_feats
+        self.suppress = suppress
 
     def fit(self, X: pd.DataFrame, y: pd.DataFrame) -> object:
         """ A function to fit the data with two estimators one after another
@@ -53,12 +55,13 @@ class Estimator(BaseEstimator, RegressorMixin):
             -------
                 self (object): A model fitted on residuals
         """
-        #unittest left: amount of columns
+        # unittest left: amount of columns
         self.trend_season_model_ = clone(self.trend_season_model)
         self.residual_model_ = clone(self.residual_model)
 
-        print("length of window y:", len(y))
-        print("length of window X:", len(X))
+        if not self.suppress:
+            print("length of window y:", len(y))
+            print("length of window X:", len(X))
 
         if self.time_columns_start is not None:
             X_time = np.asarray(X)[:, self.time_columns_start:]
