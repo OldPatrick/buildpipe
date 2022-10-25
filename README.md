@@ -101,11 +101,11 @@ estimator = Estimator(trend_season_model=LinearRegression(),
 
 estimator__param = {
   "trend_season": {
-    "Estimator__trend_season_model__positive": [True]
+    "MetaEstimator__trend_season_model__positive": [True]
   },
   "residual": {
-    "Estimator__residual_model__max_leaves": [8, 16, 24, 32],
-    "Estimator__residual_model__max_bins": [128, 256]
+    "MetaEstimator__residual_model__max_leaves": [8, 16, 24, 32],
+    "MetaEstimator__residual_model__max_bins": [128, 256]
   }
 }
 
